@@ -1,0 +1,73 @@
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+html {
+    /* box-sizing: border-box; */
+}
+
+body {
+    padding: 0;
+    background: var(--backgrond);
+    color: var(--text-color);
+    font-family: 'Manrope', sans-serif;
+}
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--button);
+}
+
+/*--------- Header ----------*/
+
+nav > img {
+    margin-left: 3%;
+    height: 32px;
+    border: 1px solid yellow;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1%;
+    align-items: center;
+    border: 1px solid blue;
+}
+
+.Menu {
+    display: flex;
+    border: 1px solid red;
+    gap: 1rem;
+    color: var(--button);
+}
+
+#getCoffe {
+   margin-right: 4%;
+   padding: 3px 20px;
+   border: 1px solid var(--button);
+   border-radius: 0.25rem;
+}
+/*----------- Main ----------- */
+
+.GreatCoffe p {
+    box-sizing: border-box;
+    font-size: 32px;
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+#Stroke {
+    color: black;
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
