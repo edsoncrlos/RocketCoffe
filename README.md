@@ -1,5 +1,6 @@
+:construction:
 # RocketCoffe
-:construction: :construction
+
 Site RocketCoffe, build for desktop and mobiles layouts.
 
 
