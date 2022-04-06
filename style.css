@@ -37,7 +37,7 @@ a:hover {
 }
 
 /*--------- Header ----------*/
-nav {
+header .container  {
     width: 100%;
     max-width: 980px;
     display: flex;
@@ -46,18 +46,23 @@ nav {
     margin: auto;
 }
 
-nav img {
+header img {
     margin-left: 20px;
     height: 32px;
     width: auto;
 }
 
+header nav ul li a
 
-.Menu {
+header nav ul li {
+    list-style: none;
+}
+
+/*  .Menu {
     display: flex;
     gap: 32px;
-    /* color: var(--button); */
-}
+    /* color: var(--button); 
+}*/
 
 #getCoffe {
    margin-right: 4%;
