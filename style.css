@@ -1,5 +1,5 @@
 :root {
-    --backgrond: #000;
+    --background: #000;
     --text-color: #FFF;
     --button: #8257E5;
     --border: #29292E;
@@ -20,20 +20,10 @@ html {
 
 body {
     padding: 0;
-    background: var(--backgrond);
+    background: var(--background);
     color: var(--text-color);
     font-family: 'Manrope', sans-serif;
     font-size: 1.6rem;
-}
-
-/* Links */
-a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-a:hover {
-    color: var(--button);
 }
 
 /*--------- Header ----------*/
@@ -44,43 +34,116 @@ header .container  {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    margin-top: 20px;
 }
 
 header img {
     margin-left: 20px;
-    height: 32px;
+    height: 38px;
     width: auto;
 }
-
-header nav ul li a
 
 header nav ul li {
     list-style: none;
 }
 
-/*  .Menu {
-    display: flex;
-    gap: 32px;
-    /* color: var(--button); 
-}*/
-
-#getCoffe {
-   margin-right: 4%;
-   padding: 3px 20px;
+#get-coffe {
+   margin-right: 20px;
+   padding: 4px 20px;
    border: 1px solid var(--button);
    border-radius: 0.25em;
 }
+
+header nav ul li a,
+#get-coffe a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header nav ul li a:hover {
+    color: var(--button);
+}
+
+#get-coffe:hover {
+    background-color: var(--button);
+}
+
+header nav ul {
+    display: flex;
+    gap: 32px; 
+    color: var(--button); 
+    font-size: 1.6rem;
+}
+
 /*----------- Main ----------- */
 
 .GreatCoffe p {
-    box-sizing: border-box;
-    font-size: 32px;
-    width: 200px;
-    margin: 30px;
-    padding: 10px;
+    font-size: 6.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+}
+
+.GreatCoffe p:nth-child(1) {
+    margin-top: 50px
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.image {
+    margin-top: 11%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto; 
+    max-width: 800px; 
+}
+
+.image-background{
+    border: 1px solid white;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 3;
 }
 
 #Stroke {
     color: black;
     text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;             
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--border);        
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--button);  
+    border-radius: 0.5rem;      
+}
+
+@media (max-width: 700px) {
+    .image {
+        margin-top: 20%;
+    }
+
+    html {
+        font-size: 50%;
+    }
 }
