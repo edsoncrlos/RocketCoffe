@@ -75,6 +75,9 @@ header nav ul {
     font-size: 1.6rem;
 }
 
+.menu-toggle {
+    display: none;
+}
 /*----------- Main ----------- */
 
 .GreatCoffe p {
@@ -93,11 +96,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
 }
 
 .image {
-    margin-top: 11%;
+    margin-top: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -108,16 +110,26 @@ main {
     width: 100%;
     height: auto; 
     max-width: 800px; 
+    /* top: 50%;
+    left: 50%;
+    transform: translate(40%, 60%);
+    z-index: 6; */
 }
 
-.image-background{
+
+
+/* .image-background{
     border: 1px solid white;
     position: absolute;
     display: flex;
-    bottom: 0;
     overflow: hidden;
-    z-index: 3;
-}
+    width: 50%;
+    height: 70%;
+    /* top: 50%;
+    left: 50%;*/
+    /* transform: translate(-0%, 60%); */
+    /* z-index: 90; 
+} */
 
 #Stroke {
     color: black;
@@ -135,15 +147,59 @@ body::-webkit-scrollbar-track {
   
 body::-webkit-scrollbar-thumb {
     background-color: var(--button);  
-    border-radius: 0.5rem;      
+    border-radius: 0.5em;      
 }
 
+
 @media (max-width: 700px) {
-    .image {
-        margin-top: 20%;
-    }
 
     html {
         font-size: 50%;
+    }
+}
+
+@media (max-width: 640px) {
+    .image {
+        margin-top: 33%;
+    }
+
+    header .container {
+        display: flex;
+
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle img {
+        width: 40px;
+    }
+
+    #get-coffe {
+        
+    }
+
+    /* fullscreen */
+    .menu-toggle.o {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: var(--background);
+
+        z-index: 10;
+    }
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block;
     }
 }
