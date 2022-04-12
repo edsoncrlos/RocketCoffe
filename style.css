@@ -27,7 +27,7 @@ body {
 }
 
 /*--------- Header ----------*/
-header .container  {
+header .menu-section  {
     width: 100%;
     max-width: 980px;
     display: flex;
@@ -77,6 +77,18 @@ header nav ul {
 
 .menu-toggle {
     display: none;
+}
+
+.coffe-text {
+    display: none;
+}
+
+.menu-section>img:nth-child(2) {
+    display: none;
+}
+
+.get-coffe img{
+    width: 30px;
 }
 /*----------- Main ----------- */
 
@@ -158,34 +170,60 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 620px) {
+    
     .image {
-        margin-top: 33%;
-    }
-
-    header .container {
-        display: flex;
-
+        margin-top: 25%;
     }
 
     nav {
         display: none;
     }
+    
+    .menu-section>img:nth-child(2) {
+        display: initial;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        margin-right: 20px;
+    }
 
     .menu-toggle {
         display: block;
     }
-
-    .menu-toggle img {
-        width: 40px;
+    .menu-section {
+        /* border: 1px solid white; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
+    .coffe-text {
+        display: initial;
+        font-size: 3rem;
+        width: 40%;
+        margin-top: 100px;
+    }
+
+    .coffe-text.on {
+        display: none;
+    }
+    .menu-toggle img {
+        width: 40px;
+
+        /* transition-duration: 0.9s; */
+    }
+ 
+    .menu-section>img {
+        display: none;
+    }
+    
     #get-coffe {
-        
+        margin-top: 60px;
     }
 
     /* fullscreen */
-    .menu-toggle.o {
+    .menu-section.on {
         position: absolute;
         top: 0;
         left: 0;
@@ -198,8 +236,31 @@ body::-webkit-scrollbar-thumb {
         z-index: 10;
     }
 
+    .menu-section.on nav {
+        display: block;
+        position: relative;
+        margin-top: 80px;
+        z-index: 12;
+        width: 100%;
+    }
+    
+    .menu-section .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        margin-right: 20px;
+    }
+    
     .menu-section.on nav ul {
         text-align: center;
         display: block;
+    }
+    
+    .menu-section.on nav ul a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 6rem;
+        display: block;
+        border: 0.1px solid var(--border-menu-mobile);
     }
 }
